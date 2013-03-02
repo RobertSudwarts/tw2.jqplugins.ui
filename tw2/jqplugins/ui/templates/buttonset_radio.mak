@@ -10,12 +10,5 @@
         <label for="${btn['id']}">${btn['label']}</label>
         % endfor
     </div>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $("#${w.selector}").${w.jqmethod}(${w.options});
-			% if 'click' in w.events:
-                $("#${w.selector} input").click(${w.events['click']});
-            % endif
-        });
-    </script>
+<%include file="buttonset_js.mak" />
 </div>
